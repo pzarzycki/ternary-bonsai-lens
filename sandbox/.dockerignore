@@ -1,0 +1,7 @@
+# Build context is sandbox/ (see bonsai_lens/sandbox.py). The image installs its own
+# node_modules; copying a host (macOS) node_modules over them via `COPY template/` would
+# break native binaries, so keep local install artifacts out of the context.
+**/node_modules
+**/dist
+**/.DS_Store
+**/*.log

@@ -1,0 +1,3 @@
+Image answer: 'Red' seconds: 2.8
+PASS: native final-layer readouts after an image prompt
+PASS: CPU vision keeps native CUDA text generation and image input working

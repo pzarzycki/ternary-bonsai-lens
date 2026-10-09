@@ -1,0 +1,3 @@
+Step 1: 694.4 ms, {'id': 19, 'piece': '4', 'text': '4', 'logit': 20.07122230529785}
+Step 2: 153.3 ms, {'id': 248046, 'piece': '<|im_end|>', 'text': '<|im_end|>', 'logit': 21.367931365966797}
+PASS: llama readouts, finite full logits, hidden states and downloadable NPZ

@@ -1,0 +1,24 @@
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+You are using a model of type `prism_hadamard_qwen35` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+The tokenizer you are loading from 'C:\Codex\ternary-bonsai-lens\models\bonsai2-27b-mlx' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+Loading packed CUDA weights...
+Dense CUDA weights loaded; packed VRAM budget: 6.3 GiB
+Loading packed module 0 / 402
+Loading packed module 50 / 402
+Loading packed module 100 / 402
+Loading packed module 150 / 402
+Loading packed module 200 / 402
+Loading packed module 250 / 402
+Loading packed module 300 / 402
+Loading packed module 350 / 402
+Loading packed module 400 / 402
+CUDA runtime: {'backend': 'cuda', 'gpu': 'NVIDIA GeForce RTX 3070 Ti Laptop GPU', 'packed_gpu_gb': 6.29, 'packed_cpu_gb': 0.357, 'vision_device': 'cpu'}
+loaded in 86.5s
+prompt tokens: 26
+max|lm_head(tap_post) - stock_logits| = 0
+max|norm(tap_pre) - tap_post|        = 0
+hidden (5120,), logits (248320,)
+tap calls per forward: 1.0
+greedy answer: '4'
+PASS
+top-5 at step 0: [('4', 20.08), ('2', 13.83), ('<|im_end|>', 13.29), ('The', 10.75), ('5', 10.32)]

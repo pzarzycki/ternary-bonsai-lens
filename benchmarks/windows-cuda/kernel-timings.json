@@ -1,0 +1,170 @@
+[
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 1,
+    "kernel": "legacy",
+    "ms": 0.9073663711547851
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 1,
+    "kernel": "optimized",
+    "ms": 1.0744832038879395
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 16,
+    "kernel": "legacy",
+    "ms": 12.641280364990234
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 16,
+    "kernel": "optimized",
+    "ms": 1.641881561279297
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 16,
+    "kernel": "padded",
+    "ms": 1.1512831687927245
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 128,
+    "kernel": "legacy",
+    "ms": 101.84048461914062
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 128,
+    "kernel": "optimized",
+    "ms": 11.762995147705078
+  },
+  {
+    "width": 5120,
+    "rows": 17408,
+    "tokens": 128,
+    "kernel": "padded",
+    "ms": 11.260108947753906
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 1,
+    "kernel": "legacy",
+    "ms": 0.7398399829864502
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 1,
+    "kernel": "optimized",
+    "ms": 0.6365183830261231
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 16,
+    "kernel": "legacy",
+    "ms": 11.821363067626953
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 16,
+    "kernel": "optimized",
+    "ms": 3.142553520202637
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 16,
+    "kernel": "padded",
+    "ms": 1.865727996826172
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 128,
+    "kernel": "legacy",
+    "ms": 95.185205078125
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 128,
+    "kernel": "optimized",
+    "ms": 12.382310485839843
+  },
+  {
+    "width": 17408,
+    "rows": 5120,
+    "tokens": 128,
+    "kernel": "padded",
+    "ms": 11.183513641357422
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 1,
+    "kernel": "legacy",
+    "ms": 1.6348159790039063
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 1,
+    "kernel": "optimized",
+    "ms": 0.9108480453491211
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 16,
+    "kernel": "legacy",
+    "ms": 6.832537841796875
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 16,
+    "kernel": "optimized",
+    "ms": 1.6126976013183594
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 16,
+    "kernel": "padded",
+    "ms": 1.1188223838806153
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 128,
+    "kernel": "legacy",
+    "ms": 54.523187255859376
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 128,
+    "kernel": "optimized",
+    "ms": 5.969919967651367
+  },
+  {
+    "width": 5120,
+    "rows": 10240,
+    "tokens": 128,
+    "kernel": "padded",
+    "ms": 5.831167984008789
+  }
+]

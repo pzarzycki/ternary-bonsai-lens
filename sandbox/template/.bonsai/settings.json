@@ -1,0 +1,38 @@
+{
+  "autostart": {
+    "when": "package.json",
+    "command": "npm run dev"
+  },
+  "preview": {
+    "port": 5173
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "name": "imports",
+        "matcher": "write_file|edit",
+        "if": "*.{ts,tsx,js,jsx}",
+        "batch": true,
+        "command": "node /opt/bonsai/tools/check-imports.mjs {files}"
+      },
+      {
+        "name": "typecheck",
+        "matcher": "write_file|edit",
+        "if": "*.{ts,tsx}",
+        "batch": true,
+        "command": "npx tsc --noEmit -p tsconfig.app.json --pretty false 2>&1 | head -n 40 || exit 2"
+      }
+    ],
+    "Stop": [
+      {
+        "name": "imports",
+        "if": "src/**/*.{ts,tsx,js,jsx}",
+        "command": "node /opt/bonsai/tools/check-imports.mjs {files}"
+      },
+      {
+        "name": "typecheck",
+        "command": "npx tsc --noEmit -p tsconfig.app.json --pretty false 2>&1 | head -n 40 || exit 2"
+      }
+    ]
+  }
+}

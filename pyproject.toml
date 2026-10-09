@@ -1,0 +1,33 @@
+[project]
+name = "bonsai-lens"
+version = "0.1.0"
+description = "Local runtime + last-layer readouts for Ternary Bonsai 2 27B (MLX / CUDA)"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "mlx==0.32.0; sys_platform == 'darwin' and platform_machine == 'arm64'",
+    "mlx-lm==0.31.3; sys_platform == 'darwin' and platform_machine == 'arm64'",
+    "mlx-vlm==0.6.3; sys_platform == 'darwin' and platform_machine == 'arm64'",
+    "transformers==5.5.0",
+    "torch==2.11.0; sys_platform != 'darwin'",
+    "safetensors>=0.7",
+    "cupy-cuda12x==13.6.0; sys_platform != 'darwin'",
+    "numpy>=2.0",
+    "tokenizers>=0.21",
+    "jinja2>=3.1",
+    "pillow>=10.0",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "prompt-toolkit>=3.0",
+    "rich>=13",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "sys_platform != 'darwin'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

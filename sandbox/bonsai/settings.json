@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {"name": "python", "matcher": "write_file|edit", "if": "*.py", "batch": true,
+       "command": "python3 /opt/bonsai/tools/check-python.py {files}"},
+      {"name": "page", "matcher": "write_file|edit", "if": "*.{html,htm,js,jsx,ts,tsx,css,vue,svelte,py}", "batch": true,
+       "ifClean": true, "needsPreview": true, "image": "/tmp/bonsai/preview.png",
+       "command": "node /opt/bonsai/tools/check-page.mjs {preview_url}"}
+    ],
+    "Stop": [
+      {"name": "python", "if": "*.py", "command": "python3 /opt/bonsai/tools/check-python.py {files}"},
+      {"name": "page", "ifClean": true, "needsPreview": true, "image": "/tmp/bonsai/preview.png",
+       "command": "node /opt/bonsai/tools/check-page.mjs {preview_url}"}
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+Capture logit difference: max=0.000000, rms=0.000000
+RMSNorm max error: 0.00000763
+Capture logit difference: max=0.000000, rms=0.000000
+RMSNorm max error: 0.00000381
+PASS: 128-token native prompt capture and exact logits parity
+PASS: 512-token native prompt capture and exact logits parity
+PASS: native pre/post-norm identity, finite full logits, capture-on/off parity, greedy 4, and recurrent session restore

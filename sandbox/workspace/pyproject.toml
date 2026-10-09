@@ -1,0 +1,16 @@
+[project]
+name = "workspace"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = []
+
+# CPU-only PyTorch (there is no GPU in this sandbox): `uv add torch` resolves torch from this index.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+torchvision = [{ index = "pytorch-cpu" }]
+torchaudio = [{ index = "pytorch-cpu" }]
