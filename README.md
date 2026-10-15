@@ -1,5 +1,9 @@
 # Bonsai Lens
 
+<p align="center">
+  <img src="docs/images/lens-single-step.webp" alt="Bonsai Lens: single-step readout of Ternary Bonsai 2 27B" width="60%">
+</p>
+
 A local runtime for **Ternary Bonsai 2 27B** with Apple Silicon MLX and two Windows/NVIDIA implementations. Both Windows backends run the actual ternary weights; neither substitutes a dense Qwen checkpoint.
 
 | Backend | Weights | Chat / Code / images | Layer readouts |
@@ -116,6 +120,8 @@ uv run server.py          # http://localhost:8000 (serves web/dist)
 # for UI development with hot reload:
 cd web && npm run dev     # http://localhost:5173, proxies /api to :8000
 ```
+
+![Lens tab: one greedy step showing the top-50 logits, the logit histogram and the 5,120-d hidden state before unembedding](docs/images/lens-single-step.webp)
 
 Each **Step** feeds the prompt or the previously chosen token, then shows the following for the last position. Long prefills may be split into batches; only one next token is selected per Step.
 
